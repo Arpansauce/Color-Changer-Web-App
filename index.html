@@ -4,35 +4,26 @@
     <link rel="stylesheet" href="./style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>Color Changer Web App</title>
   </head>
   <body>
-    <h1>Calculator</h1>
-
-    <div class="contanier">
-      <div class="Calculator-container">
-        <input type="text" id="display" readonly />
-        <div class="button-container">
-          <button onclick="click_1()">1</button>
-          <button onclick="click_2()">2</button>
-          <button onclick="click_3()">3</button>
-          <button onclick="click_4()">4</button>
-          <button onclick="click_5()">5</button>
-          <button onclick="click_6()">6</button>
-          <button onclick="click_7()">7</button>
-          <button onclick="click_8()">8</button>
-          <button onclick="click_9()">9</button>
-          <button onclick="click_0()">0</button>
-          <button onclick="click_plus()">+</button>
-          <button onclick="click_minus()">-</button>
-          <button onclick="click_equal()">=</button>
-          <button onclick="click_x()">x</button>
-          <button onclick="click_divison()">÷</button>
-          <button onclick="click_dot()">.</button>
-          <button id="clear" onclick="click_clear()">C</button>
-        </div>
-      </div>
+    <h1>Click a Button to Change Background Color!</h1>
+    <div id="colorName">Selected Color: None</div>
+    <div class="buttons">
+      <button onclick="changeColor('#e74c3c', 'Red')">Red</button>
+      <button onclick="changeColor('#3498db', 'Blue')">Blue</button>
+      <button onclick="changeColor('#f1c40f', 'Yellow')">Yellow</button>
+      <button onclick="changeColor('#2ecc71', 'Green')">Green</button>
     </div>
+    <button onclick="changeColor('#9b59b6', 'Purple')">Purple</button>
+    <button onclick="changeColor('#e67e22', 'Orange')">Orange</button>
+    <button onclick="changeColor('#ff69b4', 'Pink')">Pink</button>
+    <script>
+      function changeColor(color, name) {
+        document.body.style.backgroundColor = color;
+        let display = document.getElementById("colorName");
+        display.innerText = "Selected Color: " + name;
+      }
+    </script>
   </body>
-  <script src="./index.js"></script>
 </html>
