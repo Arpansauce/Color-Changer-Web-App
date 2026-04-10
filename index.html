@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer Web App</title>
+  </head>
+  <body>
+    <h1>Click a Button to Change Background Color!</h1>
+    <div id="colorName">Selected Color: None</div>
+    <div class="buttons">
+      <button onclick="changeColor('#e74c3c', 'Red')">Red</button>
+      <button onclick="changeColor('#3498db', 'Blue')">Blue</button>
+      <button onclick="changeColor('#f1c40f', 'Yellow')">Yellow</button>
+      <button onclick="changeColor('#2ecc71', 'Green')">Green</button>
+    </div>
+    <button onclick="changeColor('#9b59b6', 'Purple')">Purple</button>
+    <button onclick="changeColor('#e67e22', 'Orange')">Orange</button>
+    <button onclick="changeColor('#ff69b4', 'Pink')">Pink</button>
+    <script>
+      function changeColor(color, name) {
+        document.body.style.backgroundColor = color;
+        let display = document.getElementById("colorName");
+        display.innerText = "Selected Color: " + name;
+      }
+    </script>
+  </body>
+</html>
